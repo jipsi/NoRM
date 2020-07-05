@@ -5,7 +5,7 @@
 %%non-responsive state (p_nr)
 %%which can then be the basis for hypo-responses seen in double LPS
 %%challenge etc. These non-responsive cells can then further become
-%%non-responsive forever (p_nr_minus) or non-responsive state (p_nr) 
+%%non-responsive permanent (p_nr_minus) or non-responsive state (p_nr) 
 function [vector_community_time_evolution, vector_time] = Gillespie_4_state_5_rate_memory(cell_in_soup, rate_coeff, LPS, startTime, stopTime)
     %%
     %Override combinations here
