@@ -7,7 +7,7 @@
 %%challenge etc. These non-responsive cells can then further become
 %%non-responsive permanently (p_nr_minus) or be non-responsive state (p_nr)
 %%temporarily.
-function [vector_community_time_evolution, vector_time] = Gillespie_4_state_5_rate_memory(cell_in_soup, rate_coeff, LPS, startTime, stopTime)
+function [vector_community_time_evolution, vector_time] = Gillespie_4_state_5_rate_memory(cell_in_soup, rate_coeff, LPS, startTime, stopTime, lps_mu)
     %%
     %Override combinations here
     time_to_finish = stopTime; %Gillespie reactions run for x hours 
@@ -38,7 +38,7 @@ function [vector_community_time_evolution, vector_time] = Gillespie_4_state_5_ra
     %rate of switching to p_nr
     gamma=rate_coeff(3);
     %rate of switching to p_nr_minus
-    delta=rate_coeff(4);
+    gamma2=rate_coeff(4);
     %rate of switching to p_minus from p_nr
     beta2=rate_coeff(5);
     %rate at which LPS degrades
@@ -46,14 +46,14 @@ function [vector_community_time_evolution, vector_time] = Gillespie_4_state_5_ra
     %LPS concentratoin at start
     LPS_deltaT = LPS;
     %LPS effect multiplier
-    lambda = 100;
+    lps_coeff = lps_mu;
     %compute reaction rates (propensity*number of species)
     while time <= time_to_finish+5
        %Adding 1 then makes a small effect at 0 ng/ml
-       rate_p_plus = alpha*(1+(lambda*LPS_deltaT));
+       rate_p_plus = alpha*(1+(lps_coeff*LPS_deltaT));
        rate_p_minus = beta;
        rate_p_nr = gamma;
-       rate_p_nr_minus = delta;
+       rate_p_nr_minus = gamma2;
        rate_p_minus_from_nr = beta2;
        
        %propensity = [1. p_minus_TO_p_plus 2. p_plus_TO_p_minus 3. p_plus_TO_p_nr 4. p_plus_TO_p_nr_minus 5. p_nr_TO_p_minus] 
@@ -106,7 +106,7 @@ function [vector_community_time_evolution, vector_time] = Gillespie_4_state_5_ra
             vector_p_nr_minus(1,i) = p_nr_minus;
             vector_time(1,i) = i;
         end
-       LPS_deltaT = LPS_deltaT - lps_decay_rate*time_to_reaction*LPS_deltaT;
+        LPS_deltaT = LPS_deltaT - lps_decay_rate*time_to_reaction*LPS_deltaT;
         if LPS_deltaT < 0
             LPS_deltaT = 0;
         end

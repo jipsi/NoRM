@@ -17,8 +17,8 @@ function [filtered_params] = fit_2_challenge_time_points_param_pies(cytokine, cy
     %load experimental values
     %add your csv file here with percentage positives with different time
     %points
-    E2 = readtable(strcat('exp_',cytokine,'_',type,'.csv'),'ReadVariableNames',true);
-
+    E2 = readtable(strcat('bmdm1_',cytokine,'_',type,'.csv'),'ReadVariableNames',true);
+    
     
     if (search==1)
         hyper_combinations = [0.0 0.0005 0.0005 0.001  0.005 0.05];
@@ -29,7 +29,8 @@ function [filtered_params] = fit_2_challenge_time_points_param_pies(cytokine, cy
         param_search_mat =  [param_search_mat; param_search_mat_norm; param_search_mat_negbinom];
     %use search=0 if you have a pre-saved list of parameters to test against
     else
-        param_search_mat = readtable(strcat('final_params_r63_',cytokine,'_',type,'.csv'),'ReadVariableNames',true);
+        path2read='D:\GoogleDrive\silence\PAPER\Macrophage AIH\FRONTIERS_review\modelling\NoRM\results_with_mu\';                                        
+        param_search_mat = readtable(strcat(path2read,'\',cytokine_formatted,'\','exp_',cytokine,'_',type,'.csv'),'ReadVariableNames',true);
         param_search_mat = param_search_mat(:,1:5);
         param_search_mat = table2array(param_search_mat);
     end
@@ -63,7 +64,7 @@ function [filtered_params] = fit_2_challenge_time_points_param_pies(cytokine, cy
     %16hr
     e2chall12 =  E2.M_1000_16/100;
 
-    %%twice-challenged - 10/1000
+    %%twice-challenged - 1 0/1000
     %8hr
     e2loTol4 =  E2.x10_1000_8/100;
     %12hr
