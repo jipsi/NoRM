@@ -8,7 +8,6 @@ Select a relative/absolute path in fit_2_challenge_time_points_param_pies_test.m
 Select a relative/absolute path for saving results.  
 
 For figures 6E, 7, 8 and 9
-
 Start at execute.m  
 
 Executes fit_2_challenge_time_points_param_pies_test.m with intialising parameters  
@@ -19,10 +18,8 @@ Executes fit_2_challenge_time_points_param_pies_test.m with intialising paramete
 4. search=0; #decides whether to search for parameters or select parameters saved in a csv  
 
 For figure 6D, see
-
 execute_ode_ssa_check
 
 For SSA/Gillespie implementation, see
-
 Gillespie_4_state_5_rate_memory.m
 
