@@ -3,9 +3,13 @@ Activation induced heterogeneity: Single cells in a macrophage population respon
 This non-responsiveness can be permanent (at least over an observed period of time) or even reversible as seen by delayed kinetics. This code models to appearance and disappearance of these proposed states (Dey et al, unpublished) by using a Doob-Gillespie algorithm. This code traces the time-evolution of these states and predicts transition rates that maybe closest to predicting experimental data. These parameters are referred to as NoRM parameters.
 
 Priors
+
 All csv files (included in NoRM) to be in the same folder as your working directory
+
 Select a relative/absolute path in fit_2_challenge_time_points_param_pies_test.m
+
 Select a relative/absolute path for saving results in 
+
 
 Start at execute.m
 *Executes fit_2_challenge_time_points_param_pies_test.m with intialising parameters
