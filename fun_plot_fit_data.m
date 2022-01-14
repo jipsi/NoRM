@@ -41,25 +41,7 @@ function [filtered_params] = fun_plot_fit_data(final_params, plotAllEvolutionMat
                 ylim([0 1]);
                 hold on
 
-    %             %Descriptive stats on all matrices
-    %             bigChallengeMatAvg = mean(bestFitbigChallengeMat);
-    %             bigChallengeMatSD = 1.96*std(bestFitbigChallengeMat);
-    %             bigReChallengeMatAvg = mean(bestFitbigReChallengeMat);
-    %             bigReChallengeMatSD = 1.96*std(bestFitbigReChallengeMat);
-    % 
-    %             bigMatAvg=[bigChallengeMatAvg bigReChallengeMatAvg];
-    %             bigMatSD=[bigChallengeMatSD bigReChallengeMatSD];
-    %             e=errorbar(0:1:47,bigMatAvg,bigMatSD);
-    %             e.Color='k';
 
-                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                %%%%%%%%%%Mark experimental data%%%%%%%%%%
-                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                %     e2loTol8, e2loTol12, e2loTol16
-                %     e2Tol8, e2Tol12, e2Tol16
-                %     e2chall8, e2chall12, e2chall16
 
                 scatter(tpts(1),scatterMat(1,1),60,'+','MarkerEdgeColor','r',...
                               'MarkerFaceColor','r',...
@@ -89,16 +71,7 @@ function [filtered_params] = fun_plot_fit_data(final_params, plotAllEvolutionMat
                 ylim([0 1]);
                 hold on
 
-    %             %Descriptive stats on all matrices
-    %             bigLowChallengeMatAvg = mean(bestFitbigLowChallengeMat);
-    %             bigLowChallengeMatSD = 1.96*std(bestFitbigLowChallengeMat);
-    %             bigReLowChallengeMatAvg = mean(bestFitbigReLowChallengeMat);
-    %             bigReLowChallengeMatSD = 1.96*std(bestFitbigReLowChallengeMat);
-    % 
-    %             bigLowMatAvg=[bigLowChallengeMatAvg bigReLowChallengeMatAvg];
-    %             bigLowMatSD=[bigLowChallengeMatSD bigReLowChallengeMatSD];
-    %             e=errorbar(0:1:47,bigLowMatAvg,bigLowMatSD);
-    %             e.Color='k';
+
 
                 scatter(28,scatterMat(2,1),60,'*','MarkerEdgeColor','r',...
                       'MarkerFaceColor','r',...
