@@ -18,7 +18,7 @@ Executes fit_2_challenge_time_points_param_pies_test.m with intialising paramete
 4. search=0; #decides whether to search for parameters or select parameters saved in a csv  
 
 For figure 6D, see
-execute_ode_ssa_check
+execute_ode_ssa_check.m
 
 For SSA/Gillespie implementation, see
 Gillespie_4_state_5_rate_memory.m
