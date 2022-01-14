@@ -15,5 +15,5 @@ Executes fit_2_challenge_time_points_param_pies_test.m with intialising paramete
 1. minimum_deviation=0.2; #minimum deviation from experimental results  
 2. tpts_bmdm=[4 8 12]; #timepoints for BMDMs  
 3. tpts_raw=[8 12 16]; #timepoints for RAW cells  
-4.search=0; #decides whether to search for parameters or select parameters saved in a csv  
+4. search=0; #decides whether to search for parameters or select parameters saved in a csv  
 
