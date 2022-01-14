@@ -7,6 +7,7 @@ All csv files (included in NoRM) to be in the same folder as your working direct
 Select a relative/absolute path in fit_2_challenge_time_points_param_pies_test.m  
 Select a relative/absolute path for saving results.  
 
+For figures 6E, 7, 8 and 9
 
 Start at execute.m  
 
@@ -17,3 +18,6 @@ Executes fit_2_challenge_time_points_param_pies_test.m with intialising paramete
 3. tpts_raw=[8 12 16]; #timepoints for RAW cells  
 4. search=0; #decides whether to search for parameters or select parameters saved in a csv  
 
+For figure 6D
+
+See 
