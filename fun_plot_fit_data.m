@@ -1,7 +1,8 @@
 function [filtered_params] = fun_plot_fit_data(final_params, plotAllEvolutionMat, bigChallengeMat, bigReChallengeMat, plotLowAllEvolutionMat, bigLowChallengeMat, bigReLowChallengeMat,...
                                             primary_community, secondary_community, cytokine_formatted, total_time_in_hours, scatterMat, meta_data_for_file_name, search, filterValue, tpts)
     %set(0,'DefaultFigureVisible','off');
-    path2save='D:\GoogleDrive\silence\PAPER\Macrophage AIH\FRONTIERS_review\modelling\NoRM\results_june21\';                                        
+    %Add your path here - results will be saved here
+    path2save='';                                        
     font = 'Times New Roman';                                    
     if (search==1)
         final_params_2_save=sortrows(final_params,8);
