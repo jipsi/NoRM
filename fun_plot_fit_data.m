@@ -1,8 +1,7 @@
 function [filtered_params] = fun_plot_fit_data(final_params, plotAllEvolutionMat, bigChallengeMat, bigReChallengeMat, plotLowAllEvolutionMat, bigLowChallengeMat, bigReLowChallengeMat,...
                                             primary_community, secondary_community, cytokine_formatted, total_time_in_hours, scatterMat, meta_data_for_file_name, search, filterValue, tpts)
     %set(0,'DefaultFigureVisible','off');
-    %Add your path here - results will be saved here
-    path2save='';                                        
+    path2save='D:\GoogleDrive\silence\PAPER\Macrophage AIH\Wellcome_Open\_REVIEWER_MARK_COLES\NoRM\results\';                                        
     font = 'Times New Roman';                                    
     if (search==1)
         final_params_2_save=sortrows(final_params,8);
@@ -42,6 +41,14 @@ function [filtered_params] = fun_plot_fit_data(final_params, plotAllEvolutionMat
                 hold on
 
 
+                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                %%%%%%%%%%Mark experimental data%%%%%%%%%%
+                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                %     e2loTol8, e2loTol12, e2loTol16
+                %     e2Tol8, e2Tol12, e2Tol16
+                %     e2chall8, e2chall12, e2chall16
 
                 scatter(tpts(1),scatterMat(1,1),60,'+','MarkerEdgeColor','r',...
                               'MarkerFaceColor','r',...
@@ -70,7 +77,6 @@ function [filtered_params] = fun_plot_fit_data(final_params, plotAllEvolutionMat
                 xlabel('Time (in hr)');
                 ylim([0 1]);
                 hold on
-
 
 
                 scatter(28,scatterMat(2,1),60,'*','MarkerEdgeColor','r',...
