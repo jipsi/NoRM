@@ -65,9 +65,9 @@ function [filtered_params] = fit_2_challenge_time_points_param_pies_test(cytokin
         mu_lps=[10];
         %use search=0 if you have a pre-saved list of parameters to test against
     elseif search == 0
-        path2read='D:\GoogleDrive\silence\PAPER\Macrophage AIH\Wellcome_Open\_REVIEWER_MARK_COLES\NoRM\results';   
-        strcat(path2read,'\',cytokine_formatted,'\','exp_',cytokine,'_',type,'_',num2str(states),'_states.csv')
-        param_search_mat = readtable(strcat(path2read,'\',cytokine_formatted,'\','exp_',cytokine,'_',type,'_',num2str(states),'_states.csv'),'ReadVariableNames',true);
+        path2read='/results/';   
+        strcat(path2read,'/',cytokine_formatted,'/','exp_',cytokine,'_',type,'_',num2str(states),'_states.csv')
+        param_search_mat = readtable(strcat(path2read,'/',cytokine_formatted,'/','exp_',cytokine,'_',type,'_',num2str(states),'_states.csv'),'ReadVariableNames',true);
         %keep LPS co-efficients mu as a separate matrix
         mu_lps=table2array(param_search_mat(:,6));
         param_search_mat = param_search_mat(:,1:5);
