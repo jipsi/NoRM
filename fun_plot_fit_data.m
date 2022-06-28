@@ -1,7 +1,7 @@
 function [filtered_params] = fun_plot_fit_data(final_params, plotAllEvolutionMat, bigChallengeMat, bigReChallengeMat, plotLowAllEvolutionMat, bigLowChallengeMat, bigReLowChallengeMat,...
                                             primary_community, secondary_community, cytokine_formatted, total_time_in_hours, scatterMat, meta_data_for_file_name, search, filterValue, tpts)
     %set(0,'DefaultFigureVisible','off');
-    path2save='D:\GoogleDrive\silence\PAPER\Macrophage AIH\Wellcome_Open\_REVIEWER_MARK_COLES\NoRM\results\';                                        
+    path2save='/results/';                                        
     font = 'Times New Roman';                                    
     if (search==1)
         final_params_2_save=sortrows(final_params,8);
