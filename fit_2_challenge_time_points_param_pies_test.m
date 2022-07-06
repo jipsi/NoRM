@@ -30,7 +30,7 @@ function [filtered_params] = fit_2_challenge_time_points_param_pies_test(cytokin
         %In this case alpha, beta, gamma, gamma2, beta2
         number_of_parameters = 5;
         %Number of simulated parameter sets/distribution
-        number_of_parameter_sets = 100000;
+        number_of_parameter_sets = 1000;
         %Generate a matrix where rows represent parameter sets and columns
         %represents individual parameters
         %Parameter sets as sampled from a continous uniform distribution between 0.01 and 1
