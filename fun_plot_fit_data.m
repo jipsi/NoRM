@@ -6,7 +6,7 @@ function [filtered_params] = fun_plot_fit_data(final_params, plotAllEvolutionMat
     if (search==1)
         final_params_2_save=sortrows(final_params,8);
         final_params_2_save=final_params_2_save(1:50,:);
-        csvwrite(strcat(path2save,'\',cytokine_formatted,'\',meta_data_for_file_name,'.csv'),final_params_2_save)     
+        csvwrite(strcat(path2save,'/',cytokine_formatted,'/',meta_data_for_file_name,'.csv'),final_params_2_save)     
         filtered_params = final_params_2_save;
     else
         colorMe='c';
